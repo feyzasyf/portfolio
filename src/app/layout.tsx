@@ -3,8 +3,8 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import { ThemeProvider } from '@/components/theme-provider';
-import { ShootingStars } from '@/components/ui/shadcn-io/shooting-stars';
 import ShootingStarAnimation from '@/components/ShootingStarAnimation';
+import SparklesAnimation from '@/components/SparklesAnimation';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -29,16 +29,15 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <Header />
-          <div className='flex min-h-screen items-center justify-center font-sans'>
-            <main className='flex min-h-screen w-full max-w-5xl flex-col items-center justify-between py-32 px-16 sm:items-start'>
-              {children}
-            </main>
-          </div>
-          <ShootingStarAnimation />
+
+          {children}
+
+          {/* <ShootingStarAnimation /> */}
+          <SparklesAnimation />
         </ThemeProvider>
       </body>
     </html>
