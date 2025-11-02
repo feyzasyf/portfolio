@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Bitcount_Grid_Single } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -8,6 +8,12 @@ import SparklesAnimation from '@/components/SparklesAnimation';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
+  subsets: ['latin'],
+});
+
+const bitcountSingle = Bitcount_Grid_Single({
+  weight: '400',
+  variable: '--font-bitcount-grid-single',
   subsets: ['latin'],
 });
 
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bitcountSingle.variable} antialiased`}
       >
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <Header />
