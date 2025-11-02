@@ -6,12 +6,12 @@ import ResumeList from '@/components/ResumeList';
 export default function Resume() {
   return (
     <section
-      id='resume'
+      id='work'
       className='min-h-screen w-full flex  justify-center relative pt-24'
     >
-      <div className='max-w-5xl w-full relative px-12'>
+      <div className='max-w-5xl w-full relative px-16'>
         <ProgressBar />
-        <div className='flex flex-col sm:flex-row gap-3 sm:gap-12'>
+        <div className='flex flex-col sm:flex-row gap-3 sm:gap-12 '>
           <h2 className='text-4xl font-bold mb-0 sm:mb-8'>
             My Work Experience
           </h2>
@@ -19,7 +19,9 @@ export default function Resume() {
             <DownloadButton />
           </div>
         </div>
-        <ResumeList />
+        <div className='pl-8 sm:pl-0'>
+          <ResumeList />
+        </div>
       </div>
       <div className='absolute bottom-10'>
         <DownArrow sectionName='projects' />
