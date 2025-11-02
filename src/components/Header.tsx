@@ -1,9 +1,9 @@
 'use client';
-import Link from 'next/link';
+
 import { X, Menu } from 'lucide-react';
 import { useState } from 'react';
-
 import ThemeToggle from './ThemeToggle';
+import { FlipWords } from './ui/shadcn-io/flip-words';
 
 const navItems = [
   { name: 'Home', id: 'home' },
@@ -13,7 +13,7 @@ const navItems = [
 ];
 function NavigationLinks() {
   return (
-    <ul className='flex flex-col items-center gap-4 sm:flex-row  animate-text sm:animate-none motion-reduce:animate-none'>
+    <ul className='flex flex-col items-center gap-4 sm:flex-row  font-plain animate-text sm:animate-none motion-reduce:animate-none'>
       {navItems.map((item) => (
         <li key={item.name} className='flex items-center justify-center'>
           <button
@@ -30,15 +30,23 @@ function NavigationLinks() {
     </ul>
   );
 }
+const nameList = ['Feyza', '菲菲'];
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className='fixed inset-x-0 z-30  dark:bg-gray-900/80 bg-white/80'>
       <div className='flex items-center justify-between max-w-5xl mx-auto px-4 py-2'>
-        <Link href='/' className='font-bold'>
-          Logo
-        </Link>
+        <span className='font-bold text-2xl'>
+          <FlipWords
+            words={nameList}
+            duration={2500}
+            wordDelay={0.3}
+            letterDelay={0.05}
+            className={`text-green-500 font-bold font-chinese`}
+          />
+        </span>
+
         <div className='flex items-center flex-row sm:flex-row-reverse gap-4'>
           <ThemeToggle />
           <div className='sm:hidden'>
