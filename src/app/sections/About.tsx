@@ -21,26 +21,36 @@ export default function About() {
   return (
     <section
       id='about'
-      className='min-h-screen w-full flex items-center justify-center relative '
+      className='min-h-screen w-full flex items-center justify-center relative px-8 '
     >
-      <div className='sm:max-w-5xl  pl-16  mx-4 section-background'>
+      <div className='sm:max-w-5xl  px-8 sm:pl-16  mx-4 section-background'>
         <div className=' flex flex-row gap-8 '>
-          <div className='w-2/3 flex flex-col items-start mt-8'>
+          <div className='w-ful sm:w-2/3 flex flex-col items-center sm:items-start mt-8'>
             <h2 className='text-6xl font-bold mb-8'>About Me</h2>
-            <p className='mt-12'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad a
-              dolores officia atque reiciendis sit eveniet similique quae
-              obcaecati eligendi? Quo incidunt vel est nemo porro, repellat esse
-              consequuntur sunt.
-            </p>
-            <p className='mt-12'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad a
-              dolores officia atque reiciendis sit eveniet similique quae
-              obcaecati eligendi? Quo incidunt vel est nemo porro, repellat esse
-              consequuntur sunt.
-            </p>
+            <div className='flex sm:hidden -mt-20 justify-center items-center'>
+              <Image
+                src='/ben.png'
+                alt='Pixel Picture of me'
+                width={200}
+                height={200}
+              />
+            </div>
+            <div className='-mt-12 sm:mt-0'>
+              <p className='mt-12'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad a
+                dolores officia atque reiciendis sit eveniet similique quae
+                obcaecati eligendi? Quo incidunt vel est nemo porro, repellat
+                esse consequuntur sunt.
+              </p>
+              <p className='mt-12'>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad a
+                dolores officia atque reiciendis sit eveniet similique quae
+                obcaecati eligendi? Quo incidunt vel est nemo porro, repellat
+                esse consequuntur sunt.
+              </p>
+            </div>
           </div>
-          <div className='flex justify-center items-center w-1/2'>
+          <div className='hidden sm:flex shrink-0 justify-center items-center w-1/2'>
             <Image
               src='/ben.png'
               alt='Pixel Picture of me'

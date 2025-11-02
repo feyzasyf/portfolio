@@ -12,16 +12,20 @@ export default function Home() {
         id='home'
         className='flex min-h-screen w-full max-w-5xl flex-col items-center justify-center py-32 px-16 z-20'
       >
-        <div>
-          <h2 className='font-semibold text-3xl'>Hello, I&apos;m</h2>
-          <h1 className='text-9xl font-funky'>Feyza Seyfi</h1>
-          <h2 className='text-right font-semibold text-2xl'>
+        <div className=''>
+          <h2 className='font-semibold font-plain text-2xl sm:text-3xl'>
+            Hello, I&apos;m
+          </h2>
+          <h1 className='text-6xl  md:text-7xl lg:text-9xl font-funky'>
+            Feyza Seyfi
+          </h1>
+          <h2 className='text-right font-semibold font-plain text-xl sm:text-2xl'>
             A passionate
-            <FlipWords
+            {/* <FlipWords
               words={words}
               duration={2500}
               className='text-green-500 font-semibold'
-            />
+            /> */}
           </h2>
         </div>
         <div className='absolute bottom-10'>
