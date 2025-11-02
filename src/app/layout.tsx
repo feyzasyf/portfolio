@@ -1,5 +1,11 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Bitcount_Grid_Single } from 'next/font/google';
+import {
+  Geist,
+  Geist_Mono,
+  Bitcount_Grid_Single,
+  Nunito,
+  Ma_Shan_Zheng,
+} from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -9,6 +15,15 @@ import SparklesAnimation from '@/components/SparklesAnimation';
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
+});
+const nunito = Nunito({
+  weight: '600',
+  variable: '--font-nunito',
+  subsets: ['latin'],
+});
+
+const maShanZheng = Ma_Shan_Zheng({
+  weight: '400',
 });
 
 const bitcountSingle = Bitcount_Grid_Single({
@@ -35,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bitcountSingle.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bitcountSingle.variable} ${nunito.variable} ${maShanZheng.className} antialiased`}
       >
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <Header />

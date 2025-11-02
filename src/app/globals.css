@@ -5,6 +5,7 @@
 
 @theme inline {
   --font-funky: var(--font-bitcount-grid-single);
+  --font-chinese: var(--font-ma-shan-zheng);
   --font-plain: var(--font-nunito);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
