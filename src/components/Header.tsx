@@ -6,18 +6,25 @@ import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 
 const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Projects', href: '/projects' },
+  { name: 'Home', id: 'home' },
+  { name: 'About', id: 'about' },
+  { name: 'Resume', id: 'resume' },
+  { name: 'Projects', id: 'projects' },
 ];
 function NavigationLinks() {
   return (
     <ul className='flex flex-col items-center gap-4 sm:flex-row space-x-4 animate-text sm:animate-none motion-reduce:animate-none'>
       {navItems.map((item) => (
         <li key={item.name}>
-          <Link href={item.href} className='px-4 py-2 inline-block font-bold'>
+          <button
+            onClick={() => {
+              const element = document.getElementById(item.id);
+              element?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className='px-4 py-2 inline-block font-bold'
+          >
             {item.name}
-          </Link>
+          </button>
         </li>
       ))}
     </ul>
@@ -27,7 +34,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className='fixed inset-x-0 z-20  dark:bg-gray-900/80 bg-white/80'>
+    <header className='fixed inset-x-0 z-30  dark:bg-gray-900/80 bg-white/80'>
       <div className='flex items-center justify-between max-w-5xl mx-auto px-4 py-2'>
         <Link href='/' className='font-bold'>
           Logo
