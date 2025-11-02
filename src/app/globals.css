@@ -5,6 +5,7 @@
 
 @theme inline {
   --font-funky: var(--font-bitcount-grid-single);
+  --font-plain: var(--font-nunito);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -88,12 +89,11 @@
   --radius-lg: var(--radius);
 
   --radius-xl: calc(var(--radius) + 4px);
+  --shadow-green: 0 0 0 1px oklch(67.952% 0.11384 142.542);
 }
 
 :root {
   --radius: 0.625rem;
-  --header-background: rgba(233, 182, 59, 1);
-  /* --background: oklch(1 0 0); */
   --background: oklch(95.411% 0.00678 67.385);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -125,6 +125,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --shadow-green: 0 0 0 1px oklch(67.952% 0.11384 142.542);
 }
 
 .dark {
@@ -161,6 +162,8 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  /* --section-background: oklch(29.445% 0.00732 17.325); */
+  --shadow-green: 1px 1px 1px 2px oklch(67.952% 0.11384 142.542);
 }
 
 @layer base {
@@ -170,7 +173,8 @@
   body {
     @apply bg-background text-foreground;
   }
-  .header-background {
-    background-color: var(--header-background);
+
+  .section-background {
+    @apply bg-card  border-2  rounded-xl border-green-500/20  shadow-green;
   }
 }

@@ -1,6 +1,10 @@
-import About from '@/components/About';
+import About from '@/app/sections/About';
+import DownArrow from '@/components/DownArrow';
 import { FlipWords } from '@/components/ui/shadcn-io/flip-words';
+import Resume from './sections/Resume';
+
 const words = ['developer.', 'designer.', 'creator.'];
+
 export default function Home() {
   return (
     <div className='flex flex-col items-center w-full font-sans'>
@@ -9,9 +13,9 @@ export default function Home() {
         className='flex min-h-screen w-full max-w-5xl flex-col items-center justify-center py-32 px-16 z-20'
       >
         <div>
-          <h2 className='pl-2'>Hello, I&apos;m</h2>
+          <h2 className='font-semibold text-3xl'>Hello, I&apos;m</h2>
           <h1 className='text-9xl font-funky'>Feyza Seyfi</h1>
-          <h2 className='text-right'>
+          <h2 className='text-right font-semibold text-2xl'>
             A passionate
             <FlipWords
               words={words}
@@ -20,8 +24,13 @@ export default function Home() {
             />
           </h2>
         </div>
+        <div className='absolute bottom-10'>
+          <DownArrow sectionName='about' />
+        </div>
       </section>
+
       <About />
+      <Resume />
     </div>
   );
 }

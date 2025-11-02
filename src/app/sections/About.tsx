@@ -1,0 +1,77 @@
+import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
+import TechStack from '../../components/TechStack';
+import DownArrow from '../../components/DownArrow';
+import Image from 'next/image';
+
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+
+    icon: <LinkedInLogoIcon className='w-12 h-12 text-black dark:text-white' />,
+    url: 'https://www.linkedin.com/in/feyzaseyfi/',
+  },
+  {
+    name: 'GitHub',
+    icon: <GitHubLogoIcon className='w-12 h-12 text-black dark:text-white' />,
+    url: 'https://github.com/feyzasyf',
+  },
+];
+
+export default function About() {
+  return (
+    <section
+      id='about'
+      className='min-h-screen w-full flex items-center justify-center relative '
+    >
+      <div className='sm:max-w-5xl  pl-16  mx-4 section-background'>
+        <div className=' flex flex-row gap-8 '>
+          <div className='w-2/3 flex flex-col items-start mt-8'>
+            <h2 className='text-6xl font-bold mb-8'>About Me</h2>
+            <p className='mt-12'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad a
+              dolores officia atque reiciendis sit eveniet similique quae
+              obcaecati eligendi? Quo incidunt vel est nemo porro, repellat esse
+              consequuntur sunt.
+            </p>
+            <p className='mt-12'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad a
+              dolores officia atque reiciendis sit eveniet similique quae
+              obcaecati eligendi? Quo incidunt vel est nemo porro, repellat esse
+              consequuntur sunt.
+            </p>
+          </div>
+          <div className='flex justify-center items-center w-1/2'>
+            <Image
+              src='/ben.png'
+              alt='Pixel Picture of me'
+              width={500}
+              height={500}
+            />
+          </div>
+        </div>
+        <div className='flex flex-row items-center gap-4 mb-8'>
+          <span>Connect with me:</span>
+          <ul className='flex gap-4'>
+            {socialLinks.map((link) => (
+              <li
+                key={link.name}
+                className='hover:scale-110 transition-transform transform-duration-500 ease-in-out'
+              >
+                <a href={link.url} target='_blank' rel='noopener noreferrer'>
+                  {link.icon}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* <div>
+          <TechStack />
+        </div> */}
+      </div>
+      <div className='absolute bottom-10'>
+        <DownArrow sectionName='resume' />
+      </div>
+    </section>
+  );
+}
