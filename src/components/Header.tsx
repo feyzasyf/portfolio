@@ -8,20 +8,20 @@ import ThemeToggle from './ThemeToggle';
 const navItems = [
   { name: 'Home', id: 'home' },
   { name: 'About', id: 'about' },
-  { name: 'Resume', id: 'resume' },
+  { name: 'Work', id: 'work' },
   { name: 'Projects', id: 'projects' },
 ];
 function NavigationLinks() {
   return (
-    <ul className='flex flex-col items-center gap-4 sm:flex-row space-x-4 animate-text sm:animate-none motion-reduce:animate-none'>
+    <ul className='flex flex-col items-center gap-4 sm:flex-row  animate-text sm:animate-none motion-reduce:animate-none'>
       {navItems.map((item) => (
-        <li key={item.name}>
+        <li key={item.name} className='flex items-center justify-center'>
           <button
             onClick={() => {
               const element = document.getElementById(item.id);
               element?.scrollIntoView({ behavior: 'smooth' });
             }}
-            className='px-4 py-2 inline-block font-bold'
+            className='px-4 py-2 inline-block font-bold cursor-pointer hover:underline hover:decoration-green-500 hover:underline-offset-4'
           >
             {item.name}
           </button>
