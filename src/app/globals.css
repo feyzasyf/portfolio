@@ -178,4 +178,8 @@
   .section-background {
     @apply bg-card  border-2  rounded-xl border-green-500/20  shadow-green;
   }
+
+  .wrapper {
+    @apply flex items-center justify-between max-w-5xl mx-auto px-4;
+  }
 }
