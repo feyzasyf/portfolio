@@ -3,7 +3,7 @@
 import { ChevronDown } from 'lucide-react';
 
 type DownArrowProps = {
-  sectionName: 'about' | 'resume' | 'projects';
+  sectionName: 'about' | 'resume' | 'work' | 'projects';
 };
 
 export default function DownArrow({ sectionName }: DownArrowProps) {
