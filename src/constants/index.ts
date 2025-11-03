@@ -1,0 +1,12 @@
+export const socialLinks = [
+  {
+    name: 'LinkedIn',
+    icon: 'linkedin',
+    url: 'https://www.linkedin.com/in/feyzaseyfi/',
+  },
+  {
+    name: 'GitHub',
+    icon: 'github',
+    url: 'https://github.com/feyzasyf',
+  },
+] as const;
