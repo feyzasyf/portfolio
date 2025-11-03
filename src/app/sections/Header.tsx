@@ -2,8 +2,13 @@
 
 import { X, Menu } from 'lucide-react';
 import { useState } from 'react';
-import ThemeToggle from './ThemeToggle';
-import { FlipWords } from './ui/shadcn-io/flip-words';
+import ThemeToggle from '../../components/ThemeToggle';
+import { FlipWords } from '../../components/ui/shadcn-io/flip-words';
+import { Ma_Shan_Zheng } from 'next/font/google';
+
+const maShanZheng = Ma_Shan_Zheng({
+  weight: '400',
+});
 
 const navItems = [
   { name: 'Home', id: 'home' },
@@ -13,7 +18,9 @@ const navItems = [
 ];
 function NavigationLinks() {
   return (
-    <ul className='flex flex-col items-center gap-4 sm:flex-row  font-plain animate-text sm:animate-none motion-reduce:animate-none'>
+    <ul
+      className={`flex flex-col items-center gap-4 sm:flex-row  font-plain animate-text sm:animate-none motion-reduce:animate-none`}
+    >
       {navItems.map((item) => (
         <li key={item.name} className='flex items-center justify-center'>
           <button
@@ -36,8 +43,8 @@ export default function Header() {
 
   return (
     <header className='fixed inset-x-0 z-30  dark:bg-gray-900/80 bg-white/80'>
-      <div className='flex items-center justify-between max-w-5xl mx-auto px-4 py-2'>
-        <span className='font-bold text-2xl'>
+      <div className='wrapper  py-2'>
+        <span className={`${maShanZheng.className} font-bold text-2xl`}>
           <FlipWords
             words={nameList}
             duration={2500}
