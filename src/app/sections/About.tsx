@@ -1,21 +1,7 @@
-import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import TechStack from '../../components/TechStack';
 import DownArrow from '../../components/DownArrow';
 import Image from 'next/image';
-
-const socialLinks = [
-  {
-    name: 'LinkedIn',
-
-    icon: <LinkedInLogoIcon className='w-12 h-12 text-black dark:text-white' />,
-    url: 'https://www.linkedin.com/in/feyzaseyfi/',
-  },
-  {
-    name: 'GitHub',
-    icon: <GitHubLogoIcon className='w-12 h-12 text-black dark:text-white' />,
-    url: 'https://github.com/feyzasyf',
-  },
-];
+import SocialLinks from '@/components/SocialLinks';
 
 export default function About() {
   return (
@@ -59,20 +45,9 @@ export default function About() {
             />
           </div>
         </div>
-        <div className='flex flex-row items-center gap-4 mb-8'>
+        <div className='flex flex-row items-center gap-4 mb-8 mt-4'>
           <span>Connect with me:</span>
-          <ul className='flex gap-4'>
-            {socialLinks.map((link) => (
-              <li
-                key={link.name}
-                className='hover:scale-110 transition-transform transform-duration-500 ease-in-out'
-              >
-                <a href={link.url} target='_blank' rel='noopener noreferrer'>
-                  {link.icon}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <SocialLinks />
         </div>
 
         {/* <div>
@@ -80,7 +55,7 @@ export default function About() {
         </div> */}
       </div>
       <div className='absolute bottom-10'>
-        <DownArrow sectionName='resume' />
+        <DownArrow sectionName='work' />
       </div>
     </section>
   );
