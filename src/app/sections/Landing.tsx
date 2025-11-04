@@ -1,18 +1,10 @@
 import DownArrow from '@/components/DownArrow';
-import { Bitcount_Grid_Single } from 'next/font/google';
-
-const bitcountSingle = Bitcount_Grid_Single({
-  weight: '400',
-  variable: '--font-bitcount-grid-single',
-  subsets: ['latin'],
-  fallback: ['geist-sans'],
-});
 
 export default function Landing() {
   return (
     <section
       id='home'
-      className={`flex min-h-screen w-full max-w-5xl flex-col items-center justify-center py-32 px-16 z-20 ${bitcountSingle.variable}`}
+      className='flex min-h-screen w-full max-w-5xl flex-col items-center justify-center py-32 px-16 z-20 '
     >
       <div className=''>
         <h2 className='font-semibold font-plain text-2xl sm:text-3xl'>

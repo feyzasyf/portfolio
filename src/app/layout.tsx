@@ -1,11 +1,18 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Nunito, Ma_Shan_Zheng } from 'next/font/google';
+import { Geist, Geist_Mono, Nunito } from 'next/font/google';
 import './globals.css';
 import Header from '@/app/sections/Header';
 import { ThemeProvider } from '@/components/theme-provider';
-import ShootingStarAnimation from '@/components/ShootingStarAnimation';
 import SparklesAnimation from '@/components/SparklesAnimation';
 import Footer from './sections/Footer';
+import { Bitcount_Grid_Single } from 'next/font/google';
+
+const bitcountSingle = Bitcount_Grid_Single({
+  weight: '400',
+  variable: '--font-bitcount-grid-single',
+  subsets: ['latin'],
+  fallback: ['geist-sans'],
+});
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -40,7 +47,7 @@ export default function RootLayout({
         <link rel='icon' href='favcon.ico' sizes='any' />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable}  ${nunito.variable}  antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}  ${nunito.variable} ${bitcountSingle.variable}  antialiased`}
       >
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <Header />
