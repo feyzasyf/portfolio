@@ -1,14 +1,16 @@
 'use client';
 import useOnScreen from '@/hooks/useOnScreen';
+import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion';
 import { useEffect, useRef } from 'react';
 import toast from 'react-hot-toast';
 
 export default function ThanksMessage() {
   const isVisible = useOnScreen();
   const firstRender = useRef(true);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (isVisible && firstRender.current) {
+    if (isVisible && firstRender.current && !prefersReducedMotion) {
       firstRender.current = false;
 
       setTimeout(() => {
@@ -26,7 +28,7 @@ export default function ThanksMessage() {
         ));
       }, 800);
     }
-  }, [isVisible]);
+  }, [isVisible, prefersReducedMotion]);
   return (
     <div
       id='end'
