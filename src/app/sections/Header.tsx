@@ -1,5 +1,4 @@
 'use client';
-
 import { X, Menu } from 'lucide-react';
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import ThemeToggle from '../../components/ThemeToggle';
@@ -14,7 +13,6 @@ const navItems = [
   { name: 'Home', id: 'home' },
   { name: 'About', id: 'about' },
   { name: 'Work', id: 'work' },
-  { name: 'Projects', id: 'projects' },
 ];
 
 type NavigationLinksProps = {
