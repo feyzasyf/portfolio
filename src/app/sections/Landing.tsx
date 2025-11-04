@@ -22,7 +22,7 @@ export default function Landing() {
           Feyza Seyfi
         </h1>
         <h2 className='text-right font-semibold font-plain text-xl sm:text-2xl'>
-          A passionate web developer.
+          A web developer.
         </h2>
       </div>
       <div className='absolute hidden sm:block  bottom-10'>
