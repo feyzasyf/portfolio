@@ -10,9 +10,9 @@ export default function About() {
     >
       <div className='sm:max-w-5xl  px-8 sm:pl-16 section-background'>
         <div className=' flex flex-row gap-8 '>
-          <div className='w-ful sm:w-2/3 flex flex-col items-center sm:items-start mt-8'>
+          <div className='w-full lg:w-2/3 flex flex-col items-center lg:items-start mt-8'>
             <h2 className='text-4xl sm:text-6xl font-bold mb-8'>About Me</h2>
-            <div className='flex sm:hidden -mt-20 justify-center items-center'>
+            <div className='flex lg:hidden -mt-20 justify-center items-center'>
               <Image
                 src='/ben.png'
                 alt='Pixel Picture of me'
@@ -21,7 +21,7 @@ export default function About() {
                 unoptimized
               />
             </div>
-            <div className='-mt-12 sm:mt-0 text-sm sm:text-base'>
+            <div className='-mt-10 sm:mt-0 text-sm sm:text-base px-4 sm:px-0'>
               <p className='mt-4'>
                 Hey there! I’m a web developer who loves building things for the
                 web and constantly learning new ways to do it better. Most of my
@@ -42,7 +42,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className='hidden sm:flex shrink-0 justify-center items-center w-1/2'>
+          <div className='hidden lg:flex shrink-0 justify-center items-center w-1/2 lg:w-1/3'>
             <Image
               src='/ben.png'
               alt='Pixel Picture of me'

@@ -13,7 +13,7 @@ export default function ThanksMessage() {
 
       setTimeout(() => {
         toast.custom(() => (
-          <div className='bg-white dark:bg-gray-700 shadow-lg mb-2 sm:mb-20 rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5'>
+          <div className='bg-white dark:bg-gray-700 shadow-lg mb-2 rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5'>
             <div className='flex items-start p-3'>
               <div className='shrink-0 pt-0.5'>
                 <span>🏆</span>
