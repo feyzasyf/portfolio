@@ -25,7 +25,7 @@ export default function Landing() {
           A passionate web developer.
         </h2>
       </div>
-      <div className='absolute bottom-10'>
+      <div className='absolute hidden sm:block  bottom-10'>
         <DownArrow sectionName='about' />
       </div>
     </section>

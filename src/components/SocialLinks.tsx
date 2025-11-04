@@ -18,7 +18,7 @@ export default function SocialLinks() {
               className='list-none hover:scale-110 transition-transform transform-duration-500 ease-in-out'
             >
               <a href={url} target='_blank' rel='noopener noreferrer'>
-                <Icon className='w-12 h-12 text-black dark:text-white' />
+                <Icon className='w-8 h-8 sm:w-12 sm:h-12 text-black dark:text-white' />
                 <span className='sr-only'>{name}</span>
               </a>
             </li>

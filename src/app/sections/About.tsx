@@ -1,4 +1,3 @@
-import TechStack from '../../components/TechStack';
 import DownArrow from '../../components/DownArrow';
 import Image from 'next/image';
 import SocialLinks from '@/components/SocialLinks';
@@ -9,10 +8,10 @@ export default function About() {
       id='about'
       className='min-h-screen w-full flex items-center justify-center relative px-8 '
     >
-      <div className='sm:max-w-5xl  px-8 sm:pl-16  mx-4 section-background'>
+      <div className='sm:max-w-5xl  px-8 sm:pl-16 section-background'>
         <div className=' flex flex-row gap-8 '>
           <div className='w-ful sm:w-2/3 flex flex-col items-center sm:items-start mt-8'>
-            <h2 className='text-6xl font-bold mb-8'>About Me</h2>
+            <h2 className='text-4xl sm:text-6xl font-bold mb-8'>About Me</h2>
             <div className='flex sm:hidden -mt-20 justify-center items-center'>
               <Image
                 src='/ben.png'
@@ -49,12 +48,8 @@ export default function About() {
           <span>Connect with me:</span>
           <SocialLinks />
         </div>
-
-        {/* <div>
-          <TechStack />
-        </div> */}
       </div>
-      <div className='absolute bottom-10'>
+      <div className='absolute hidden sm:block bottom-10'>
         <DownArrow sectionName='work' />
       </div>
     </section>

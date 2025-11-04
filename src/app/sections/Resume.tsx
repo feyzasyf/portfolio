@@ -9,21 +9,20 @@ export default function Resume() {
       id='work'
       className='min-h-screen w-full flex  justify-center relative pt-24'
     >
-      <div className='max-w-5xl w-full relative px-16'>
-        <ProgressBar />
+      <div className='max-w-5xl w-full relative px-8 sm:px-16'>
         <div className='flex flex-col sm:flex-row gap-3 sm:gap-12 '>
-          <h2 className='text-4xl font-bold mb-0 sm:mb-8'>
+          <h2 className='text-3xl sm:text-4xl font-bold mb-0 sm:mb-8'>
             My Work Experience
           </h2>
           <div className='w-1/2 sm:w-auto'>
             <DownloadButton />
           </div>
         </div>
-        <div className='pl-8 sm:pl-0'>
+        <div className=''>
           <ResumeList />
         </div>
       </div>
-      <div className='absolute bottom-10'>
+      <div className='absolute hidden sm:block bottom-10'>
         <DownArrow sectionName='projects' />
       </div>
     </section>
