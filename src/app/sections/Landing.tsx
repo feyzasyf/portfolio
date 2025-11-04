@@ -18,16 +18,11 @@ export default function Landing() {
         <h2 className='font-semibold font-plain text-2xl sm:text-3xl'>
           Hello, I&apos;m
         </h2>
-        <h1 className='text-6xl  md:text-7xl lg:text-9xl font-funky'>
+        <h1 className='text-5xl  md:text-7xl lg:text-9xl font-funky'>
           Feyza Seyfi
         </h1>
         <h2 className='text-right font-semibold font-plain text-xl sm:text-2xl'>
-          A passionate
-          {/* <FlipWords
-              words={words}
-              duration={2500}
-              className='text-green-500 font-semibold'
-            /> */}
+          A passionate web developer.
         </h2>
       </div>
       <div className='absolute bottom-10'>
