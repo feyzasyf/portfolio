@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id='about'
-      className='min-h-screen w-full flex items-center justify-center relative px-8 '
+      className='min-h-screen w-full flex items-center justify-center relative px-8 pb-0 sm:pb-12'
     >
       <div className='sm:max-w-5xl  px-8 sm:pl-16 section-background'>
         <div className=' flex flex-row gap-8 '>
@@ -22,17 +22,23 @@ export default function About() {
               />
             </div>
             <div className='-mt-12 sm:mt-0'>
-              <p className='mt-12'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad a
-                dolores officia atque reiciendis sit eveniet similique quae
-                obcaecati eligendi? Quo incidunt vel est nemo porro, repellat
-                esse consequuntur sunt.
+              <p className='mt-4'>
+                Hey there! I’m a web developer who loves building things for the
+                web and constantly learning new ways to do it better. Most of my
+                experience is on the front end with React, TypeScript, and
+                Redux, but I’ve also worked with Python and Django on the back
+                end and I’m exploring more full-stack development.
               </p>
-              <p className='mt-12'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad a
-                dolores officia atque reiciendis sit eveniet similique quae
-                obcaecati eligendi? Quo incidunt vel est nemo porro, repellat
-                esse consequuntur sunt.
+              <p className='mt-4'>
+                I like experimenting with different tools like Vue, Svelte, C#,
+                Rust, anything that teaches me something new. When I’m not
+                coding, I’m usually watching Chinese dramas or playing adventure
+                games.
+              </p>
+              <p className='mt-4'>
+                I’m always open to collaborating on open-source projects and I
+                am in the belief that technology should empower people, not
+                dominate them.
               </p>
             </div>
           </div>
@@ -51,7 +57,7 @@ export default function About() {
           <SocialLinks />
         </div>
       </div>
-      <div className='absolute hidden sm:block bottom-10'>
+      <div className='absolute hidden sm:block bottom-4'>
         <DownArrow sectionName='work' />
       </div>
     </section>
