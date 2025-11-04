@@ -56,10 +56,10 @@ function ResumePart({ date, position, details }: ResumePartProps) {
   return (
     <div className='relative'>
       <ProgressBar />
-      <div className='pl-8 sm:pl-4 relative flex flex-col gap-2 sm:flex-row'>
-        <div className='basis-auto sm:basis-xs mr-8 text-gray-600 '>
+      <div className='pl-8 sm:pl-4 relative flex flex-col gap-2 sm:flex-row '>
+        <div className='basis-auto sm:basis-xs mr-8 dark:text-gray-600'>
           <p className='text-xl sm:text-3xl'>{date}</p>
-          <h3 className='text-gray-500 text-xl'>{position}</h3>
+          <h3 className='dark:text-gray-500 text-xl'>{position}</h3>
         </div>
         <ul className='basis-auto sm:basis-lg flex gap-2 flex-col list-disc list-outside'>
           {details.map((detail, index) => (
@@ -79,7 +79,7 @@ const CompanyDetails = ({ item }: { item: CVItem }) => {
       <div className='flex flex-row gap-4'>
         <div className='rounded-full w-6 h-6 bg-green-700 mt-1 shrink-0'></div>
         <div className='flex flex-col gap-1'>
-          <div className='flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-2'>
+          <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 sm:gap-2'>
             <p className='inline text-2xl sm:text-3xl dark:text-gray-400 text-gray-800'>
               {item.company}
             </p>
@@ -92,7 +92,7 @@ const CompanyDetails = ({ item }: { item: CVItem }) => {
       </div>
 
       {item.experience.map((exp, index) => (
-        <div key={index} className='pl-4 sm:pl-12 py-3'>
+        <div key={index} className='pl-4 sm:pl-12 py-4 sm:py-6'>
           <ResumePart
             key={index}
             date={exp.date}
