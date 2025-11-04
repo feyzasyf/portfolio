@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id='about'
-      className='min-h-screen w-full flex items-center justify-center relative px-8 pb-0 sm:pb-12'
+      className='min-h-screen w-full flex items-center justify-center relative px-8 sm:px-16 pb-0 sm:pb-12'
     >
       <div className='sm:max-w-5xl  px-8 sm:pl-16 section-background'>
         <div className=' flex flex-row gap-8 '>
@@ -21,7 +21,7 @@ export default function About() {
                 unoptimized
               />
             </div>
-            <div className='-mt-12 sm:mt-0'>
+            <div className='-mt-12 sm:mt-0 text-sm sm:text-base'>
               <p className='mt-4'>
                 Hey there! I’m a web developer who loves building things for the
                 web and constantly learning new ways to do it better. Most of my
@@ -52,7 +52,7 @@ export default function About() {
             />
           </div>
         </div>
-        <div className='flex flex-row items-center gap-4 mb-8 mt-4'>
+        <div className='flex flex-row items-center gap-4 mb-8 mt-4 text-sm sm:text-base'>
           <span>Connect with me:</span>
           <SocialLinks />
         </div>

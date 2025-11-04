@@ -106,7 +106,7 @@ const CompanyDetails = ({ item }: { item: CVItem }) => {
 };
 export default function ResumeList() {
   return (
-    <div className='flex flex-col gap-16 mb-32'>
+    <div className='flex flex-col gap-16 mb-16'>
       {cv.map((item, index) => (
         <CompanyDetails key={index} item={item} />
       ))}

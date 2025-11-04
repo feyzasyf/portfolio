@@ -6,7 +6,7 @@ export default function Resume() {
   return (
     <section
       id='work'
-      className='min-h-screen w-full flex  justify-center relative pt-24 px-8'
+      className='min-h-screen w-full flex justify-center relative pt-24 px-8 sm:px-16'
     >
       <div className='max-w-5xl w-full relative'>
         <div className='flex flex-col sm:flex-row gap-3 sm:gap-12 '>
@@ -17,12 +17,9 @@ export default function Resume() {
             <DownloadButton />
           </div>
         </div>
-        <div className=''>
+        <div>
           <ResumeList />
         </div>
-      </div>
-      <div className='absolute hidden sm:block bottom-10'>
-        <DownArrow sectionName='projects' />
       </div>
     </section>
   );
