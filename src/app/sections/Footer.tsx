@@ -2,6 +2,7 @@ import SocialLinks from '@/components/SocialLinks';
 import Image from 'next/image';
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <section className='w-full pb-3 text-sm '>
       <div className='mb-4 bg-linear-to-r from-transparent via-green-800 to-transparent h-px w-full' />
@@ -20,7 +21,7 @@ export default function Footer() {
         <div className='basis-1/3 flex justify-center'>
           <SocialLinks />
         </div>
-        <p className='basis-1/3 text-right'>© 2025 Feyza.</p>
+        <p className='basis-1/3 text-right'>© {currentYear} Feyza.</p>
       </div>
     </section>
   );
