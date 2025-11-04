@@ -18,6 +18,7 @@ export default function About() {
                 alt='Pixel Picture of me'
                 width={200}
                 height={200}
+                unoptimized
               />
             </div>
             <div className='-mt-12 sm:mt-0'>
@@ -41,6 +42,7 @@ export default function About() {
               alt='Pixel Picture of me'
               width={500}
               height={500}
+              unoptimized
             />
           </div>
         </div>
