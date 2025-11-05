@@ -131,9 +131,7 @@
 
 .dark {
   --background: oklch(0.145 0 0);
-  /* --background: oklch(0.2559 0.0222 229); */
   --foreground: oklch(0.985 0 0);
-  /* --card: oklch(0.205 0 0); */
   --card: oklch(0.2559 0.0222 229);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
@@ -163,7 +161,6 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-  /* --section-background: oklch(29.445% 0.00732 17.325); */
   --shadow-green: 1px 1px 1px 2px oklch(67.952% 0.11384 142.542);
 }
 
