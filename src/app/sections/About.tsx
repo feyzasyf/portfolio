@@ -25,12 +25,12 @@ export default function About() {
               <p className='mt-4'>
                 Hey there! I’m a web developer who loves building things for the
                 web and constantly learning new ways to do it better. Most of my
-                experience is on the front end with React, TypeScript, and
-                Redux, but I’ve also worked with Python and Django on the back
-                end and I’m exploring more full-stack development.
+                experience is on the frontend with React, TypeScript, and Redux,
+                but I’ve also worked with Python and Django on the back end and
+                I’m exploring more full-stack development.
               </p>
               <p className='mt-6'>
-                I like experimenting with different tools like Vue, Svelte, C#,
+                I like experimenting with different tools like Vue, ThreeJS, C#,
                 Rust, anything that teaches me something new. When I’m not
                 coding, I’m usually watching Chinese dramas or playing adventure
                 games.
