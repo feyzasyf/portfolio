@@ -16,7 +16,7 @@ export default function DownArrow({ sectionName }: DownArrowProps) {
   return (
     <div>
       <ChevronDown
-        className='w-6 h-6 text-black dark:text-white hover:cursor-pointer animate-bounce'
+        className='w-6 h-6 text-black dark:text-white hover:cursor-pointer motion-reduce:animate-none animate-bounce'
         onClick={() => goToSection(sectionName)}
       />
     </div>

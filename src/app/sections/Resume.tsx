@@ -1,4 +1,3 @@
-import DownArrow from '@/components/DownArrow';
 import DownloadButton from '@/components/DownloadButton';
 import ResumeList from '@/components/ResumeList';
 
@@ -6,7 +5,7 @@ export default function Resume() {
   return (
     <section
       id='work'
-      className='min-h-screen w-full flex justify-center relative pt-24 px-8 sm:px-16'
+      className='min-h-screen w-full flex justify-center relative pt-18 sm:pt-24 px-8 sm:px-16'
     >
       <div className='max-w-5xl w-full relative'>
         <div className='flex flex-col sm:flex-row gap-3 sm:gap-12 '>

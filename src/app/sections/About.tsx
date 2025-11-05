@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id='about'
-      className='min-h-screen w-full flex items-center justify-center relative px-8 sm:px-16 pb-0 sm:pb-12'
+      className='min-h-screen  w-full flex items-center justify-center relative px-8 sm:px-16 pb-12'
     >
       <div className='sm:max-w-5xl py-4 sm:py-8 px-4 sm:px-8 sm:pl-16 section-background'>
         <div className=' flex flex-row gap-8 '>
@@ -57,7 +57,7 @@ export default function About() {
           <SocialLinks />
         </div>
       </div>
-      <div className='absolute hidden sm:block bottom-4'>
+      <div className='absolute bottom-0 sm:bottom-4'>
         <DownArrow sectionName='work' />
       </div>
     </section>
