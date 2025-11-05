@@ -43,6 +43,10 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
+        <meta
+          name='robots'
+          content='noai, noimageai, noindex, noarchive, nosnippet'
+        ></meta>
         <link rel='icon' href='favicon.ico' sizes='any' />
       </head>
       <body
