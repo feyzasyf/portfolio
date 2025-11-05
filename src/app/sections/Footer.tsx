@@ -7,21 +7,21 @@ export default function Footer() {
     <section className='w-full pb-3 text-sm '>
       <div className='mb-4 bg-linear-to-r from-transparent via-green-800 to-transparent h-px w-full' />
       <div className='wrapper pb-4 '>
-        <div className='hidden sm:flex flex-row items-center gap-1 sm:basis-1/3'>
-          <p>Pixel art by me</p>
+        <div className='w-32'>
           <Image
+            className='float-right'
             src='/heart.png'
             alt='Pixel Heart'
-            width={30}
-            height={30}
+            width={25}
+            height={25}
             unoptimized
           />
+          <p className='pt-0.5'>Pixel art by me</p>
+          <p>© {currentYear} Feyza</p>
         </div>
-
-        <div className='basis-1/3 flex justify-center'>
+        <div className='flex justify-center'>
           <SocialLinks />
         </div>
-        <p className='basis-1/3 text-right'>© {currentYear} Feyza.</p>
       </div>
     </section>
   );
