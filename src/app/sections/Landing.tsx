@@ -4,7 +4,7 @@ export default function Landing() {
   return (
     <section
       id='home'
-      className='flex min-h-screen w-full max-w-5xl flex-col items-center justify-center py-32 px-16 z-20 '
+      className='relative flex min-h-screen w-full max-w-5xl flex-col items-center justify-center py-32 px-16 z-20 '
     >
       <div className=''>
         <h2 className='font-semibold font-plain text-2xl sm:text-3xl'>
