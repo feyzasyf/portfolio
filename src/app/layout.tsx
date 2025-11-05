@@ -32,8 +32,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Feyza's Website",
-  description:
-    "Welcome to my page! I'm Feyza, a passionate software developer.",
+  description: "Welcome to my page! I'm Feyza, a passionate web developer.",
 };
 
 export default function RootLayout({
@@ -44,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
-        <link rel='icon' href='favcon.ico' sizes='any' />
+        <link rel='icon' href='favicon.ico' sizes='any' />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable}  ${nunito.variable} ${bitcountSingle.variable}  antialiased`}
