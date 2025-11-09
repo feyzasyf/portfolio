@@ -5,7 +5,7 @@ export default function useOnScreen() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const element = document.getElementById('end');
+      const element = document.getElementById('end-of-content');
       if (element) {
         const rect = element.getBoundingClientRect();
         setIsVisible(rect.top >= 0 && rect.bottom <= window.innerHeight);
