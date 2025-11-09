@@ -22,6 +22,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/'],
       },
     ],
-    sitemap: 'https://feyzasyf.github.io/sitemap.xml',
+    sitemap: 'https://feyfeyportfolio.netlify.app/sitemap.xml',
   };
 }
