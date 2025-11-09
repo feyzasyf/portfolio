@@ -1,14 +1,6 @@
 import ProgressBar from './ProgressBar';
-type CVItem = {
-  company: string;
-  date: string;
-  description: string;
-  experience: {
-    date: string;
-    position: string;
-    details: string[];
-  }[];
-};
+import { CVItem, ResumePartProps } from '@/types/cv';
+
 const cv: CVItem[] = [
   {
     company: 'Denebunu',
@@ -46,11 +38,6 @@ const cv: CVItem[] = [
     ],
   },
 ];
-type ResumePartProps = {
-  date: string;
-  position: string;
-  details: string[];
-};
 
 function ResumePart({ date, position, details }: ResumePartProps) {
   return (

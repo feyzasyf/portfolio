@@ -1,4 +1,6 @@
-export const socialLinks = [
+import { SocialLink } from '@/types/social';
+
+export const socialLinks: SocialLink[] = [
   {
     name: 'LinkedIn',
     icon: 'linkedin',
