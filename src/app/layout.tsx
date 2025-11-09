@@ -56,8 +56,6 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
-
-          {/* <ShootingStarAnimation /> */}
           <SparklesAnimation />
         </ThemeProvider>
       </body>
