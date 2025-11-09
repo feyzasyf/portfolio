@@ -8,7 +8,7 @@ export default function ScrollUp() {
   };
 
   return (
-    <div className='hidden sm:flex hover:scale-110 hover:animate-none duration-300 animate-pulse motion-reduce:transition-none absolute bottom-6 right-6 h-12 w-12 rounded-full justify-center items-center bg-gray-400/40  '>
+    <div className='hidden sm:flex hover:scale-110 hover:animate-none duration-300 animate-pulse motion-reduce:transition-none motion-reduce:animate-none absolute bottom-6 right-6 h-12 w-12 rounded-full justify-center items-center bg-gray-400/40  '>
       <Button
         aria-label='Scroll to top'
         handleClick={scrollToTop}

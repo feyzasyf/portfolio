@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction, useEffect, useRef, useState } from 'react';
 import ThemeToggle from '../../components/ThemeToggle';
 import { FlipWords } from '../../components/ui/shadcn-io/flip-words';
 import { Ma_Shan_Zheng } from 'next/font/google';
+import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion';
 
 const maShanZheng = Ma_Shan_Zheng({
   weight: '400',
@@ -46,9 +47,11 @@ function NavigationLinks({ setIsOpen }: NavigationLinksProps) {
 }
 const nameList = ['Feyza', '菲菲'];
 export default function Header() {
+  const prefersReducedMotion = usePrefersReducedMotion();
   const [isOpen, setIsOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement | null>(null);
   const menuRef = useRef<HTMLDivElement | null>(null);
+  const currentWord = nameList[0];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
@@ -88,13 +91,19 @@ export default function Header() {
       </a>
       <div className='wrapper  py-2'>
         <span className={`${maShanZheng.className} font-bold text-2xl`}>
-          <FlipWords
-            words={nameList}
-            duration={2500}
-            wordDelay={0.3}
-            letterDelay={0.05}
-            className={`text-green-600 font-bold font-chinese`}
-          />
+          {prefersReducedMotion ? (
+            <span className='text-green-600 font-bold font-chinese'>
+              {currentWord}
+            </span>
+          ) : (
+            <FlipWords
+              words={nameList}
+              duration={2500}
+              wordDelay={0.3}
+              letterDelay={0.05}
+              className='text-green-600 font-bold font-chinese'
+            />
+          )}
         </span>
 
         <div className='flex items-center flex-row sm:flex-row-reverse gap-4'>
