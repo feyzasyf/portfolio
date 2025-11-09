@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { urlLink } from '@/constants';
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -22,6 +23,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/'],
       },
     ],
-    sitemap: 'https://feyfeyportfolio.netlify.app/sitemap.xml',
+    sitemap: `${urlLink}/sitemap.xml`,
   };
 }

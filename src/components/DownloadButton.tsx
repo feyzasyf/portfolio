@@ -1,8 +1,7 @@
 'use client';
 import { useRef } from 'react';
 import Button from './Button';
-
-const urlLink = 'https://feyfeyportfolio.netlify.app';
+import { urlLink } from '@/constants';
 
 export default function DownloadButton() {
   const linkRef = useRef<HTMLAnchorElement | null>(null);

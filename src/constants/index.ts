@@ -10,3 +10,5 @@ export const socialLinks = [
     url: 'https://github.com/feyzasyf',
   },
 ] as const;
+
+export const urlLink = 'https://feyfeyportfolio.netlify.app';
