@@ -2,10 +2,12 @@
 import { useRef } from 'react';
 import Button from './Button';
 
+const urlLink = 'https://feyfeyportfolio.netlify.app';
+
 export default function DownloadButton() {
   const linkRef = useRef<HTMLAnchorElement | null>(null);
   const downloadCV = async () => {
-    const response = await fetch('http://localhost:3000/api/files');
+    const response = await fetch(`${urlLink}/api/files`);
     const blob = await response.blob();
     const url = window.URL.createObjectURL(blob);
     const link = linkRef.current as HTMLAnchorElement | null;
