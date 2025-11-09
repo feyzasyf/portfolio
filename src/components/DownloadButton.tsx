@@ -22,7 +22,10 @@ export default function DownloadButton() {
   return (
     <>
       <a ref={linkRef} className='hidden'></a>
-      <Button handleClick={downloadCV} className='mb-8'>
+      <Button
+        handleClick={downloadCV}
+        className='mb-8 bg-green-500 text-white py-2 px-4 rounded cursor-pointer'
+      >
         Download CV
       </Button>
     </>
