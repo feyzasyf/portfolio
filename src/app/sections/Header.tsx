@@ -26,7 +26,8 @@ function NavigationLinks({ setIsOpen }: NavigationLinksProps) {
     >
       {navItems.map((item) => (
         <li key={item.name} className='flex items-center justify-center'>
-          <button
+          <a
+            href={`#${item.id}`}
             onClick={() => {
               const element = document.getElementById(item.id);
               element?.scrollIntoView({ behavior: 'smooth' });
@@ -37,7 +38,7 @@ function NavigationLinks({ setIsOpen }: NavigationLinksProps) {
             className='px-4 py-2 inline-block font-bold cursor-pointer hover:underline hover:decoration-green-500 hover:underline-offset-4'
           >
             {item.name}
-          </button>
+          </a>
         </li>
       ))}
     </ul>
@@ -78,6 +79,13 @@ export default function Header() {
       ref={headerRef}
       className='fixed inset-x-0 z-30  dark:bg-gray-900/90 bg-white/90'
     >
+      {/* Skip to content link */}
+      <a
+        href='#main'
+        className='sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 bg-green-500 text-white px-3 py-1 rounded'
+      >
+        Skip to main content
+      </a>
       <div className='wrapper  py-2'>
         <span className={`${maShanZheng.className} font-bold text-2xl`}>
           <FlipWords
@@ -85,33 +93,47 @@ export default function Header() {
             duration={2500}
             wordDelay={0.3}
             letterDelay={0.05}
-            className={`text-green-500 font-bold font-chinese`}
+            className={`text-green-600 font-bold font-chinese`}
           />
         </span>
 
         <div className='flex items-center flex-row sm:flex-row-reverse gap-4'>
           <ThemeToggle />
+          {/* Mobile menu button */}
           <div className='sm:hidden'>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className='cursor-pointer flex'
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isOpen}
+              aria-controls='mobile-menu'
             >
-              {isOpen ? <X /> : <Menu />}
+              {isOpen ? <X aria-hidden='true' /> : <Menu aria-hidden='true' />}
             </button>
           </div>
 
-          <nav className='hidden sm:flex items-center space-x-4'>
+          {/* Desktop nav */}
+          <nav
+            className='hidden sm:flex items-center space-x-4'
+            aria-label='Main navigation'
+          >
             <NavigationLinks />
           </nav>
         </div>
       </div>
+
+      {/* Mobile nav */}
       {isOpen && (
         <div
+          id='mobile-menu'
           ref={menuRef}
           className='sm:hidden block text-center  dark:bg-gray-900/90 bg-white/90'
         >
           <nav className='pb-5'>
-            <NavigationLinks setIsOpen={setIsOpen} />
+            <NavigationLinks
+              setIsOpen={setIsOpen}
+              aria-label='Mobile navigation'
+            />
           </nav>
         </div>
       )}

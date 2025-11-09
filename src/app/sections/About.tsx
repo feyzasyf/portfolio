@@ -6,12 +6,18 @@ export default function About() {
   return (
     <section
       id='about'
+      aria-labelledby='about-heading'
       className='min-h-screen  w-full flex items-center justify-center relative px-8 sm:px-16 pb-12'
     >
       <div className='sm:max-w-5xl py-4 sm:py-8 px-4 sm:px-8 sm:pl-16 section-background'>
         <div className=' flex flex-row gap-8 '>
           <div className='w-full lg:w-2/3 flex flex-col items-center lg:items-start mt-8'>
-            <h2 className='text-4xl sm:text-6xl font-bold mb-8'>About Me</h2>
+            <h2
+              id='about-heading'
+              className='text-4xl sm:text-6xl font-bold mb-8'
+            >
+              About Me
+            </h2>
             <div className='flex lg:hidden -mt-20 justify-center items-center'>
               <Image
                 src='/ben.png'
@@ -45,7 +51,7 @@ export default function About() {
           <div className='hidden lg:flex shrink-0 justify-center items-center w-1/2 lg:w-1/3'>
             <Image
               src='/ben.png'
-              alt='Pixel Picture of me'
+              alt='Pixel-style illustration of Feyza Seyfi'
               width={500}
               height={500}
               unoptimized

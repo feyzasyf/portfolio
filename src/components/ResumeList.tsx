@@ -80,12 +80,12 @@ const CompanyDetails = ({ item }: { item: CVItem }) => {
         <div className='rounded-full w-6 h-6 bg-green-700 mt-1 shrink-0'></div>
         <div className='flex flex-col gap-1'>
           <div className='flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 sm:gap-2'>
-            <p className='inline text-2xl sm:text-3xl dark:text-gray-400 text-gray-800'>
+            <h3 className='inline text-2xl sm:text-3xl dark:text-gray-400 text-gray-800'>
               {item.company}
-            </p>
-            <p className='inline text-lg sm:text-3xl text-gray-600 float-right'>
+            </h3>
+            <time className='inline text-lg sm:text-3xl text-gray-600 float-right'>
               {item.date}
-            </p>
+            </time>
           </div>
           <p className='text-sm sm:text-base'>{item.description}</p>
         </div>

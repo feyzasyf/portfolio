@@ -1,34 +1,56 @@
 'use client';
-import { useRef } from 'react';
+import { useState } from 'react';
 import Button from './Button';
 import { urlLink } from '@/constants';
+import toast from 'react-hot-toast';
 
 export default function DownloadButton() {
-  const linkRef = useRef<HTMLAnchorElement | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState('');
+
   const downloadCV = async () => {
-    const response = await fetch(`${urlLink}/api/files`);
-    const blob = await response.blob();
-    const url = window.URL.createObjectURL(blob);
-    const link = linkRef.current as HTMLAnchorElement | null;
+    setIsLoading(true);
+    setStatusMessage('');
 
-    if (!link) {
-      return;
+    try {
+      const response = await fetch(`${urlLink}/api/files`);
+      if (!response.ok) throw new Error('Network error');
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+
+      const tempLink = document.createElement('a');
+      tempLink.href = url;
+
+      tempLink.download = 'Feyza_Seyfi_CV.pdf';
+      document.body.appendChild(tempLink);
+      tempLink.click();
+      document.body.removeChild(tempLink);
+      window.URL.revokeObjectURL(url);
+
+      setStatusMessage('Your CV download has started');
+    } catch (error) {
+      toast.error('Failed to download CV. Please try again.');
+      setStatusMessage('Download failed, Please try again');
+    } finally {
+      setIsLoading(false);
     }
-
-    link.href = url;
-    link.download = 'Feyza_Seyfi_CV.pdf';
-    link.click();
-    window.URL.revokeObjectURL(url);
   };
   return (
     <>
-      <a ref={linkRef} className='hidden'></a>
       <Button
         handleClick={downloadCV}
         className='mb-8 bg-green-500 text-white py-2 px-4 rounded cursor-pointer'
+        disabled={isLoading}
+        aria-label='Download CV'
       >
-        Download CV
+        {isLoading ? 'Downloading...' : 'Download CV'}
       </Button>
+      {statusMessage && (
+        <span role='status' aria-live='polite' className='sr-only'>
+          {statusMessage}
+        </span>
+      )}
     </>
   );
 }

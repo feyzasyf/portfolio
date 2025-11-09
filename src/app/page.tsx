@@ -7,7 +7,10 @@ import ScrollUp from '@/components/ScrollUp';
 
 export default function Home() {
   return (
-    <div className='flex flex-col items-center w-full font-sans relative'>
+    <main
+      id='main'
+      className='flex flex-col items-center w-full font-sans relative'
+    >
       <Toaster position='bottom-center' />
       <Landing />
       <About />
@@ -16,6 +19,6 @@ export default function Home() {
       <div className='w-full max-w-5xl relative'>
         <ScrollUp />
       </div>
-    </div>
+    </main>
   );
 }
