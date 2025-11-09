@@ -15,8 +15,6 @@ export default function ThemeToggle() {
   useEffect(() => setMounted(true), []);
 
   const handleThemeToggle = useCallback(() => {
-    // If the user hasn't chosen a preference (theme === 'system'), base the toggle on the
-    // currently resolved theme (the one actually applied by the system).
     const base =
       theme === 'system' || theme === undefined ? resolvedTheme : theme;
     const newMode: 'light' | 'dark' = base === 'dark' ? 'light' : 'dark';

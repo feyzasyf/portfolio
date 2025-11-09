@@ -1,7 +1,7 @@
 import About from '@/app/sections/About';
 import Landing from './sections/Landing';
 import Resume from './sections/Resume';
-import ThanksMessage from './sections/ThanksMessage';
+import Message from './sections/Message';
 import { Toaster } from 'react-hot-toast';
 import ScrollUp from '@/components/ScrollUp';
 
@@ -12,7 +12,7 @@ export default function Home() {
       <Landing />
       <About />
       <Resume />
-      <ThanksMessage />
+      <Message />
       <div className='w-full max-w-5xl relative'>
         <ScrollUp />
       </div>

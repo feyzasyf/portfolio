@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Nunito } from 'next/font/google';
 import './globals.css';
 import Header from '@/app/sections/Header';
-import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeProvider } from '@/components/ThemeProvider';
 import SparklesAnimation from '@/components/SparklesAnimation';
 import Footer from './sections/Footer';
 import { Bitcount_Grid_Single } from 'next/font/google';
