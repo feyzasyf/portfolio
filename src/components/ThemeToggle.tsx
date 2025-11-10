@@ -6,10 +6,12 @@ import {
   useThemeTransition,
 } from './ui/shadcn-io/theme-toggle-button';
 import { useTheme } from 'next-themes';
+import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion';
 
 export default function ThemeToggle() {
   const { startTransition } = useThemeTransition();
   const { theme, setTheme, resolvedTheme } = useTheme();
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
@@ -19,10 +21,14 @@ export default function ThemeToggle() {
       theme === 'system' || theme === undefined ? resolvedTheme : theme;
     const newMode: 'light' | 'dark' = base === 'dark' ? 'light' : 'dark';
 
-    startTransition(() => {
+    if (!prefersReducedMotion) {
+      startTransition(() => {
+        setTheme(newMode);
+      });
+    } else {
       setTheme(newMode);
-    });
-  }, [setTheme, startTransition, theme, resolvedTheme]);
+    }
+  }, [setTheme, startTransition, theme, resolvedTheme, prefersReducedMotion]);
 
   const currentTheme =
     (resolvedTheme as 'light' | 'dark' | undefined) ?? 'light';
