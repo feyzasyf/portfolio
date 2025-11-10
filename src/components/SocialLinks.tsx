@@ -19,7 +19,7 @@ export default function SocialLinks() {
                 target='_blank'
                 rel='noopener noreferrer'
                 aria-label={ariaLabel}
-                className='list-none hover:scale-110 transition-transform transform-duration-500 ease-in-out'
+                className='inline-flex transition-transform transform-duration-500 ease-in-out motion-reduce:transition-none motion-reduce:transform-none hover:scale-110 focus:scale-110'
               >
                 <Icon className='w-8 h-8 sm:w-12 sm:h-12 text-black dark:text-white' />
                 <span className='sr-only'>{name}</span>
