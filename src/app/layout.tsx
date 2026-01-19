@@ -1,33 +1,33 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Nunito } from 'next/font/google';
-import './globals.css';
-import Header from '@/app/sections/Header';
-import { ThemeProvider } from '@/components/ThemeProvider';
-import SparklesAnimation from '@/components/SparklesAnimation';
-import Footer from './sections/Footer';
-import { Bitcount_Grid_Single } from 'next/font/google';
+import type { Metadata } from "next";
+import { Geist, Geist_Mono, Nunito } from "next/font/google";
+import "./globals.css";
+import Header from "@/app/sections/Header";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import SparklesAnimation from "@/components/SparklesAnimation";
+import Footer from "./sections/Footer";
+import { Bitcount_Grid_Single } from "next/font/google";
 
 const bitcountSingle = Bitcount_Grid_Single({
-  weight: '400',
-  variable: '--font-bitcount-grid-single',
-  subsets: ['latin'],
-  fallback: ['geist-sans'],
+  weight: "400",
+  variable: "--font-bitcount-grid-single",
+  subsets: ["latin"],
+  fallback: ["geist-sans"],
 });
 
 const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 const nunito = Nunito({
-  weight: '600',
-  variable: '--font-nunito',
-  subsets: ['latin'],
-  fallback: ['geist-sans'],
+  weight: "600",
+  variable: "--font-nunito",
+  subsets: ["latin"],
+  fallback: ["geist-sans"],
 });
 
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -43,10 +43,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <head>
-        <meta
-          name='robots'
-          content='noai, noimageai, noindex, noarchive, nosnippet'
-        ></meta>
+        <meta name='robots' content='noai, noimageai'></meta>
         <link rel='icon' href='favicon.ico' sizes='any' />
       </head>
       <body
